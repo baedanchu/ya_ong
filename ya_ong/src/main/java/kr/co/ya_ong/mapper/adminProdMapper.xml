@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="kr.co.ya_ong.mapper.adminProdMapper">
+
+	<!-- 대분류 카테고리 목록 -->
+	<select id="adminMainCateList" resultType="main_cateDTO">
+		select * from main_cate order by main_cate_num asc
+	</select>
+	<!-- 소분류 카테고리 목록 -->
+	<!-- <select id="adminSubCateList" resultType="sub_cateDTO">
+		select * from sub_cate order by main_cate_num asc
+	</select> -->
+	<!-- 대분류 카테고리 번호로 꺼내기-->
+	<!-- <select id="adminGetMainCate" parameterType="int" resultType="main_cateDTO">
+		select main_cate_name from main_cate where main_cate_num = #{main_cate_num}
+	</select> -->
+
+</mapper>
